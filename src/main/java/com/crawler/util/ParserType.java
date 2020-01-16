@@ -1,6 +1,6 @@
 package com.crawler.util;
 
-public enum CrawlerType {
+public enum ParserType {
 
 	STACKOVERFLOW,
 	QUORA,

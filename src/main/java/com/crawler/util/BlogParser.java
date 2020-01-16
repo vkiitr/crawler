@@ -2,13 +2,11 @@ package com.crawler.util;
 
 import java.util.List;
 
-public abstract class BlogCrawler {
-
-	public String URI;
+public abstract class BlogParser extends Parser {
 	
 	public abstract String getBlogTitle();
 	
-	public abstract String getBlogContent();
+	public abstract String getBlog();
 	
 	// TODO replace string with comment class
 	public abstract List<String> getComment();
