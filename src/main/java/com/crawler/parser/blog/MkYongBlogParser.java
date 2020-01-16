@@ -1,12 +1,12 @@
-package com.crawler.util;
+package com.crawler.parser.blog;
 
 import java.util.List;
 
 import org.jsoup.nodes.Document;
 
-public class MediumBlogParser extends BlogParser {
+public class MkYongBlogParser extends BlogParser {
 
-	public MediumBlogParser() {
+	public MkYongBlogParser() {
 	}
 
 	@Override
@@ -17,7 +17,7 @@ public class MediumBlogParser extends BlogParser {
 
 	@Override
 	public String getBlogTitle() {
-		System.out.println("MediumBlogCrawler: getBlogTitle ");
+		System.out.println("MkYongBlogParser: getBlogTitle ");
 		return null;
 	}
 
@@ -34,7 +34,7 @@ public class MediumBlogParser extends BlogParser {
 	}
 
 	@Override
-	protected void store(String filename) {
+	public void store(String filename) {
 		// TODO Auto-generated method stub
 		
 	}

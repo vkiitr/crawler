@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 
-public class TestCrawler {
+public class Test {
 
 	public static void main(String[] args) {
 		String[] urlList = {

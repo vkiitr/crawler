@@ -1,6 +1,8 @@
-package com.crawler.util;
+package com.crawler.parser.quesanswer;
 
 import java.util.List;
+
+import com.crawler.parser.Parser;
 
 public abstract class QuesAnswerParser extends Parser {
 	

@@ -1,4 +1,4 @@
-package com.crawler.util;
+package com.crawler.parser;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,7 +22,7 @@ public abstract class Parser {
 		return doc.select("a[href]");	
 	}
 	
-	protected abstract List<String> getContents(Document doc, String uRL);
+	public abstract List<String> getContents(Document doc, String uRL);
 
-	protected abstract void store(String filename);
+	public abstract void store(String filename);
 }

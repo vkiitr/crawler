@@ -1,4 +1,4 @@
-package com.crawler.util;
+package com.crawler.parser.blog;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class BlogSpotBlogParser extends BlogParser {
 	}
 
 	@Override
-	protected void store(String filename) {
+	public void store(String filename) {
 		// TODO Auto-generated method stub
 		
 	}

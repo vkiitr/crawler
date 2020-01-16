@@ -1,4 +1,4 @@
-package com.crawler.util;
+package com.crawler.parser.quesanswer;
 
 import java.util.List;
 
@@ -41,7 +41,7 @@ public class QuoraQuesAnswerParser extends QuesAnswerParser {
 	}
 
 	@Override
-	protected void store(String filename) {
+	public void store(String filename) {
 		System.out.println("QuoraQuesAnswerCrawler: store " );
 		
 	}

@@ -1,4 +1,4 @@
-package com.crawler.util;
+package com.crawler.parser.quesanswer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -45,29 +45,38 @@ public class StackOverflowQuesAnswerParser extends QuesAnswerParser {
 
 	@Override
 	public Elements getAllLinksOnCurrentDocument(Document doc) {
-		return doc.select("a[href^=\"https://stackoverflow.com/questions/\"]");	
-		// return doc.select("a[href]");
+		// return doc.select("a[href^=\"https://stackoverflow.com/questions/\"]");	
+		 return doc.select("a[href]");
+		// return doc.select("a[href^=\"/questions/\"]");	
+		
 	}
 	
 	@Override
 	public List<String> getContents(Document doc, String uRL) {
-		this.doc = doc;
-		List<String> content = new ArrayList<>();
-		content.add(uRL);
-		content.add(getQuestionHeader());
-		content.add(getAnswerCount()+"");
-		content.add(getQuestion());
-//		List<String> answers = getAnswers();	
-//		for (String answer : answers) {
-//			System.out.println(answer);
-//			System.out.println("====================\n");
-//		}
-		this.contents.add(content);
-		return content;
+		if (uRL.contains("https://stackoverflow.com/questions/")) {
+			this.doc = doc;
+			List<String> content = new ArrayList<>();
+			try {
+			content.add(uRL);
+			content.add(getQuestionHeader());
+			content.add(getAnswerCount()+"");
+			content.add(getQuestion());
+//			List<String> answers = getAnswers();	
+//			for (String answer : answers) {
+//				System.out.println(answer);
+//				System.out.println("====================\n");
+//			}
+			this.contents.add(content);
+			} catch(Exception e) {
+				System.out.println("Error Ignore!");
+			}	
+			return content;
+		}
+		return null;
 	}
 
 	@Override
-	protected void store(String filename ) {
+	public void store(String filename ) {
         FileWriter writer;
         String QUES_SEPRATOR = "\n\n\n=====================================================================\n\n";
         String INTERNAL_SEPRATOR = "\n---------------------------------------------------\n";

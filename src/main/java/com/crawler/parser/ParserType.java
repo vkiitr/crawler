@@ -1,9 +1,9 @@
-package com.crawler.util;
+package com.crawler.parser;
 
 public enum ParserType {
 
 	STACKOVERFLOW,
 	QUORA,
 	BLOGSPOT,
-	MEDIUM
+	MKYONG
 }
