@@ -7,7 +7,7 @@ import com.crawler.parser.blog.MkYongBlogParser;
 import com.crawler.parser.quesanswer.QuoraQuesAnswerParser;
 import com.crawler.parser.quesanswer.StackOverflowQuesAnswerParser;
 
-public class CrawlerFactory {
+public class ParserFactory {
 
 	public Parser getParser(ParserType parserType) {
 		switch (parserType) {

@@ -1,7 +1,7 @@
 package com.crawler.test;
 
 import com.crawler.Crawler;
-import com.crawler.factory.CrawlerFactory;
+import com.crawler.factory.ParserFactory;
 import com.crawler.parser.ParserType;
 
 public class CrawlerTest {
@@ -26,7 +26,7 @@ public class CrawlerTest {
 
 		};
 				
-		Crawler crawlerObj1 = new Crawler(new CrawlerFactory().getParser(ParserType.STACKOVERFLOW));
+		Crawler crawlerObj1 = new Crawler(new ParserFactory().getParser(ParserType.STACKOVERFLOW));
 		crawlerObj1.crawlAndStore(urlList[0], 0, "C:/DataDrive/crawl-store/stackoverflow1.txt");
 
 //		Crawler crawlerObj2 = new Crawler(new CrawlerFactory().getParser(ParserType.BLOGSPOT));
